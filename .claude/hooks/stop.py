@@ -10,10 +10,10 @@ import argparse
 import json
 import os
 import sys
-import random
 import subprocess
 from pathlib import Path
 from datetime import datetime
+import secrets
 
 try:
     from dotenv import load_dotenv
@@ -110,7 +110,7 @@ def get_llm_completion_message():
     
     # Fallback to random predefined message
     messages = get_completion_messages()
-    return random.choice(messages)
+    return secrets.choice(messages)
 
 def announce_completion():
     """Announce completion using the best available TTS service."""

@@ -7,7 +7,7 @@
 # ///
 
 import sys
-import random
+import secrets
 
 def main():
     """
@@ -52,7 +52,7 @@ def main():
                 "Job complete!",
                 "Ready for next task!"
             ]
-            text = random.choice(completion_messages)
+            text = secrets.choice(completion_messages)
         
         print(f"🎯 Text: {text}")
         print("🔊 Speaking...")
